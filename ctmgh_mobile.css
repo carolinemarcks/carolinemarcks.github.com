@@ -6,6 +6,10 @@ p {
 	text-size: 24px;
 	text-align: center;
 }
+#tufts {
+	text-align: left;
+	margin-left: 20px;
+}
 #homepic {
 	width: 200px;
 }
