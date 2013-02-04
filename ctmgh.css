@@ -33,3 +33,13 @@ p {
 	right: 93%;
 	left: 0;
 }
+a {
+	color: #558C89;
+	text-decoration: underline;
+}
+a:hover {
+	font-weight: bold;
+}
+.links {
+	text-align: center;
+}
