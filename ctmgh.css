@@ -1,3 +1,12 @@
+html{
+	height: 100%;
+	margin: 0px;
+	border-left: #74AFAD 30px;
+	border-right: #74AFAD 30px;
+	border-top: 0px;
+	border-bottom: 0px;
+    border-style: solid;
+}
 h1 {
 	text-size: 36px;
 	text-align: center;
@@ -10,6 +19,13 @@ p {
 	text-align: left;
 	margin-left: 20px;
 }
-#homepic {
+#homepic{
 	width: 400px;
+}
+#bottom{
+	position: fixed;
+	bottom: 0;
+	right:0;
+	left:0;
+	height: 30px;
 }
