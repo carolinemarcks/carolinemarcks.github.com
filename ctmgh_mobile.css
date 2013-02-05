@@ -21,6 +21,9 @@ h3 {
 	text-decoration: none;
 }
 p {
+	text-align: center;
+}
+#bio {
 	text-align: justify;
 }
 #tufts {
