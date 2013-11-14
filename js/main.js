@@ -1,20 +1,23 @@
 define(['jquery', 'underscore', 'backbone',
-        'text!templates/layout.html',
-        'text!templates/home.html',
+        'text!html/layout.html',
+        'text!html/home.html',
+        'text!html/projects.html',
         'bootstrap'],
 function($, _, Backbone,
-    layout, home){
+    layout, home, projects){
     var Router = Backbone.Router.extend({
         DEFAULT_ROUTE: '',
         routes: {
-            ''  : 'home',
+            ''  : function(){
+                $("#body-container").html(home);
+            },
+            'projects'  : function(){
+                $("#body-container").html(projects);
+            }
         },
         initialize  : function(){
             $("body").html(layout);
             Backbone.history.start({root: window.location.pathname});
-        },
-        home        : function(){
-            $("#body-container").html(home);
         }
     });
 
