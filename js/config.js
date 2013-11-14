@@ -5,7 +5,6 @@
             "bootstrap" :   "//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/js/bootstrap.min",
             "underscore":   "//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min",
             "backbone"  :   "//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min",
-            "handlebars":   "//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.1.2/handlebars.min",
             "text"      :   "//cdnjs.cloudflare.com/ajax/libs/require-text/2.0.10/text"
         },
         shim:   {
@@ -17,9 +16,6 @@
                 deps    : ["underscore","jquery"],
                 exports : "Backbone"
             },
-            "handlebars":   {
-                exports : "Handlebars"
-            }
         }
 
     });

@@ -1,8 +1,8 @@
-define(['jquery', 'underscore', 'handlebars', 'backbone',
+define(['jquery', 'underscore', 'backbone',
         'text!templates/layout.html',
         'text!templates/home.html',
         'bootstrap'],
-function($, _, Handlebars, Backbone,
+function($, _, Backbone,
     layout, home){
     var Router = Backbone.Router.extend({
         DEFAULT_ROUTE: '',
