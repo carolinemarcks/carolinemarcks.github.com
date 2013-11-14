@@ -1,23 +1,20 @@
 define(['jquery', 'underscore', 'handlebars', 'backbone',
-        './views/home',
-        'text!templates/layout.template',
+        'text!templates/layout.html',
+        'text!templates/home.html',
         'bootstrap'],
 function($, _, Handlebars, Backbone,
-    HomeView,
-    layout){
-    var _layout = Handlebars.compile(layout);
+    layout, home){
     var Router = Backbone.Router.extend({
         DEFAULT_ROUTE: '',
         routes: {
             ''  : 'home',
         },
         initialize  : function(){
-            $("body").html(_layout());
+            $("body").html(layout);
             Backbone.history.start({root: window.location.pathname});
         },
         home        : function(){
-            if(!this.homeView) this.homeView = new HomeView();
-            this.homeView.render();
+            $("#body-container").html(home);
         }
     });
 
