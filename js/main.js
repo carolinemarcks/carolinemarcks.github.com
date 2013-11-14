@@ -1,15 +1,23 @@
 define(['jquery', 'underscore', 'handlebars', 'backbone',
+        './views/home',
+        'text!templates/layout.template',
         'bootstrap'],
-function($, _, Handlebars, Backbone){
+function($, _, Handlebars, Backbone,
+    HomeView,
+    layout){
+    var _layout = Handlebars.compile(layout);
     var Router = Backbone.Router.extend({
         DEFAULT_ROUTE: '',
         routes: {
             ''  : 'home',
         },
         initialize  : function(){
+            $("body").html(_layout());
+            Backbone.history.start({root: window.location.pathname});
         },
         home        : function(){
-            $("body").html("<h3>WAZZUP dawg</h3>");
+            if(!this.homeView) this.homeView = new HomeView();
+            this.homeView.render();
         }
     });
 
@@ -19,7 +27,6 @@ function($, _, Handlebars, Backbone){
 
     Main.prototype.run = function(){
         console.log("running...");
-        Backbone.history.start();
     };
 
     return new Main();
